@@ -1,0 +1,22 @@
+meta {
+  name: Get Rate Centers
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://voip.ms/api/v1/rest.php?content_type=json
+  body: multipartForm
+  auth: none
+}
+
+params:query {
+  content_type: json
+}
+
+body:multipart-form {
+  api_username: {{api_username}}
+  api_password: {{api_password}}
+  method: getRateCentersUSA
+  state: AL
+}
